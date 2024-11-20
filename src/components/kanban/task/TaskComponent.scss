@@ -1,0 +1,115 @@
+.task-wrapper {
+  background: #FFFFFF;
+  border: 1px dotted #777777;
+  border-radius: 7px;
+  cursor: pointer;
+
+  .task-title {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #F0F0F0;
+
+    h4 {
+      margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  .task-body {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    .task-plan {
+      font-size: 1rem;
+      padding: 5px;
+
+      &.late {
+        color: #bf1f1f;
+        font-weight: bold;
+        border: 1px solid #bf1f1f;
+        border-radius: 5px;
+      }
+    }
+
+    .task-notification {
+      span {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        border: solid 1px #958d8d;
+        border-radius: 5px;
+        vertical-align: top;
+        margin: 0 7px;
+        text-align: center;
+        padding: 5px;
+        line-height: 25px;
+      }
+
+      [data-badge] {
+        position: relative;
+
+        &:after {
+          position: absolute;
+          right: -10px;
+          top: -10px;
+          min-width: 10px;
+          min-height: 10px;
+          line-height: 10px;
+          padding: 5px;
+          color: #fff;
+          background-color: #bf1f1f;
+          font-size: 10px;
+          border-radius: 20px;
+          content: attr(data-badge);
+          border: solid 1px #c93a3a;
+        }
+      }
+    }
+  }
+
+  .task-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    .task-code {
+      span {
+        min-width: 50px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        background: #0088dd;
+        color: #F0F0F0;
+        font-size: 1rem;
+        font-weight: bold;
+        border: 1px solid #777777;
+        border-radius: 5px;
+      }
+    }
+
+    .task-button-wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+
+      .task-button {
+        background: #F0F0F0;
+        border: 1px solid #777777;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+          background: #E0E0E0;
+        }
+      }
+    }
+  }
+}
